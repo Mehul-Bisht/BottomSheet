@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundcolor">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+  <androidx.core.widget.NestedScrollView
+      android:padding="20dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="160dp"
+          app:cardBackgroundColor="@color/cardbackgroundcolor"
+          app:cardElevation="10dp"
+          >
+          
+          <LinearLayout
+              android:layout_margin="15dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:textColor="@android:color/white"
+                  android:text="Card Title"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/white"
+                  android:text="@string/lorem_ipsum"
+                  android:layout_marginTop="5dp"/>
+
+              <ImageView
+                  android:id="@+id/shareimg"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/ic_share"
+                  android:layout_marginTop="5dp"
+                  android:layout_gravity="end"/>
+
+          </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+  </androidx.core.widget.NestedScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/cardbackgroundcolor"
+            app:cardElevation="10dp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:id="@+id/chameleon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Click a button in share dialog to activate it !"
+                android:padding="15dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+    <include layout="@layout/bottomsheet"
+        android:id="@+id/bottomsheet"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
